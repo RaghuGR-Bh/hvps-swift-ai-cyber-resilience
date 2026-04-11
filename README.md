@@ -1,6 +1,6 @@
 # AI-Augmented Cyber Resilience for HVPS/SWIFT Networks
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19519911.svg)](https://doi.org/10.5281/zenodo.19519911)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Code and synthetic data accompanying:
@@ -66,7 +66,7 @@ All results deterministic with `seed=42`.
   journal={Journal of Cybersecurity},
   year={2026},
   publisher={Oxford University Press},
-  doi={10.5281/zenodo.XXXXXXX}
+  doi={10.5281/zenodo.19519911}
 }
 ```
 
