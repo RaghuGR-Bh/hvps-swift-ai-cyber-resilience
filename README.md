@@ -62,10 +62,10 @@ All results deterministic with `seed=42`.
 ```bibtex
 @article{ramakrishna2026hvps,
   title={Machine-Learning Fraud Detection and Cyber Stress Testing in RTGS and SWIFT Networks},
-  author={[Authors]},
-  journal={Journal of Cybersecurity},
+  author={[Raghunandan G Ramakrishna]},
+  journal={},
   year={2026},
-  publisher={Oxford University Press},
+  publisher={},
   doi={10.5281/zenodo.19519911}
 }
 ```
