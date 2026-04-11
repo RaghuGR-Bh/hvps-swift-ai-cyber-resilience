@@ -1,0 +1,80 @@
+data:
+  fraud_rate: 0.0013
+  fraud_types:
+    coordinated_multi_entity: 0.25
+    credential_transfer: 0.35
+    message_injection: 0.4
+  n_banks: 50
+  n_transactions: 500000
+  output_path: data/hvps_transactions.csv
+  peak_hour: 4
+  seed: 42
+  trading_hours: 10
+  value_log_mean: 13.5
+  value_log_std: 2.1
+models:
+  autoencoder:
+    batch_size: 256
+    encoding_dim: 12
+    epochs: 30
+  cv_folds: 5
+  dnn:
+    batch_size: 512
+    dropout: 0.3
+    epochs: 50
+    layers:
+    - 128
+    - 64
+    - 32
+    learning_rate: 0.001
+  gnn:
+    epochs: 100
+    hidden_dim: 64
+    k_neighbours: 10
+    n_layers: 3
+  hybrid:
+    supervised_weight: 0.65
+    threshold: 0.5
+    unsupervised_weight: 0.35
+  isolation_forest:
+    contamination: 0.002
+    n_estimators: 200
+  random_forest:
+    class_weight: balanced
+    max_depth: 12
+    n_estimators: 300
+  seed: 42
+  test_size: 0.2
+  xgboost:
+    colsample_bytree: 0.8
+    eval_metric: aucpr
+    learning_rate: 0.05
+    max_depth: 8
+    n_estimators: 500
+    scale_pos_weight: 769
+    subsample: 0.8
+stress_test:
+  recovery_target_hours: 2.0
+  scenarios:
+    S1:
+      attack_type: availability
+      duration_hours: 3
+      name: DDoS on high-centrality bank
+      target: top_5
+    S2:
+      attack_type: integrity
+      duration_hours: 6
+      name: Integrity attack on messages
+      target: message_queue
+    S3:
+      attack_type: fraud
+      duration_hours: 24
+      name: Fraud injection via endpoint
+      target: swift_interface
+    S4:
+      attack_type: coordinated
+      duration_hours: 48
+      name: Coordinated multi-vector
+      target: multiple
+  seed: 42
+  simulation_steps: 1000
