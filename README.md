@@ -6,7 +6,7 @@
 Code and synthetic data accompanying:
 
 > **Machine-Learning Fraud Detection and Cyber Stress Testing in RTGS and SWIFT Networks: An AI-Augmented Resilience Framework**
-> *Journal of Cybersecurity* (Oxford University Press), 2026.
+> 2026.
 
 ## Repository Structure
 
